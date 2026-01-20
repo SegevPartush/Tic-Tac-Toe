@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState([null, null, null, null, null, null, null, null, null]);
   const [isXTurn, setIsXTurn] = useState(true);
 
   function handleClick(i) {
@@ -10,7 +10,7 @@ function App() {
       return;
     }
     
-    const newSquares = [...squares];
+    const newSquares = squares.slice();
     if (isXTurn) {
       newSquares[i] = 'X';
     } else {
