@@ -23,9 +23,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>איקס עיגול</h1>
+      <h1 className="logo">
+        <span className="letter">T</span>
+        <span className="letter">i</span>
+        <span className="letter">c</span>
+        <span className="letter x-color">X</span>
+        <span className="letter">T</span>
+        <span className="letter">a</span>
+        <span className="letter">c</span>
+        <span className="letter o-color">O</span>
+        <span className="letter">e</span>
+      </h1>
       <div className="status">
-        {isXTurn ? 'התור של X' : 'התור של O'}
+        {isXTurn ? 'Next: X' : 'Next: O'}
       </div>
       <div className="board">
         <button className="square" onClick={() => handleClick(0)}>
@@ -55,6 +65,9 @@ function App() {
         <button className="square" onClick={() => handleClick(8)}>
           {squares[8]}
         </button>
+      </div>
+      <div className="credits">
+        © SegevPartush & Ofir Raz
       </div>
     </div>
   );
