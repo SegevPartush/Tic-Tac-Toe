@@ -6,6 +6,7 @@ function App() {
   const [isXTurn, setIsXTurn] = useState(true);
 
   function checkWinner(squares) {
+    // check rows
     if (squares[0] === squares[1] && squares[1] === squares[2] && squares[0] !== null) {
       return squares[0];
     }
@@ -15,6 +16,7 @@ function App() {
     if (squares[6] === squares[7] && squares[7] === squares[8] && squares[6] !== null) {
       return squares[6];
     }
+    // check columns
     if (squares[0] === squares[3] && squares[3] === squares[6] && squares[0] !== null) {
       return squares[0];
     }
@@ -24,6 +26,7 @@ function App() {
     if (squares[2] === squares[5] && squares[5] === squares[8] && squares[2] !== null) {
       return squares[2];
     }
+    // check diagonals
     if (squares[0] === squares[4] && squares[4] === squares[8] && squares[0] !== null) {
       return squares[0];
     }
@@ -38,8 +41,7 @@ function App() {
       return;
     }
     
-    const winner = checkWinner(squares);
-    if (winner !== null) {
+    if (checkWinner(squares) !== null) {
       return;
     }
     
