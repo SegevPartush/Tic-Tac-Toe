@@ -57,11 +57,41 @@
   background-color: white;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  min-width: 100px;
+  color: black;
+  user-select: none;
 }
 
 .square:hover {
   background-color: #f0f0f0;
+}
+
+.square:active {
+  background-color: white;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.reset-btn:hover {
+  background-color: #357abd;
+}
+
+.reset-btn:active {
+  background-color: #4a90e2;
 }
 
 .credits {
